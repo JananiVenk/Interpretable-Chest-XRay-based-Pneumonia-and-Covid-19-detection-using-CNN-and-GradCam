@@ -29,13 +29,16 @@
 
 
 <p style="color:MediumSeaGreen;">
-	{% with messages = get_flashed_messages() %}
-	  {% if messages %}
-        Diagnosis for the following image is: <u><h3 style="color:MediumSeaGreen;">{{ messages[0] }}</h3></u><br>
-        <img src="{{ messages[1] }}" width="300", height="225">
-       
-	  {% endif %}
-	{% endwith %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <p>Diagnosis: <h3 style="color:MediumSeaGreen;">{{ messages[0] }}</h3></p>
+    <p>Confidence: <h3 style="color:MediumSeaGreen;">{{ messages[1] }}</h3></p>
+    <p>Original Image:</p>
+    <img src="{{ messages[3] }}" width="300" height="225">
+    <p>Grad-CAM Heatmap:</p>
+    <img src="data:image/png;base64,{{ messages[2] }}" width="300" height="225">
+  {% endif %}
+{% endwith %}
 </p>
 
 
