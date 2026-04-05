@@ -1,4 +1,4 @@
-# 🫁Interpretable-Chest-XRay-based-Pneumonia-and-Covid-19-detection-using-CNN-with-GradCam
+# 🫁Interpretable-Chest-XRay-based-Pneumonia-and-Covid-19-detection-using-CNN-and-GradCam
 
 A deep learning-based web application that detects **Pneumonia** and **COVID-19** from chest X-ray images using a Convolutional Neural Network (CNN), deployed via a Flask web application.
 
